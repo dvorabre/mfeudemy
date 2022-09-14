@@ -3,6 +3,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
+// add secret in github to this variable with cloudFront domain name
+// and add in the yml file the command to liad this secret
 const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
