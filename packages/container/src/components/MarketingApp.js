@@ -7,7 +7,7 @@ export default () => {
   const history = useHistory();
 
   useEffect(() => {
-    xonsole.log(mount, "mount in mark");
+    console.log(mount, "mount in mark");
     const { onParentNavigate } = mount(ref.current, {
       onNavigate: ({pathname: nextPathname}) => {
         // listen get a location object that contain pathname property hith the path
