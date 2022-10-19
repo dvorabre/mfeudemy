@@ -20,8 +20,8 @@ export default () => {
     });
     console.log(por, "mount in mark");
     // move to the module when navigate happened
-    const { onParentNavigate } = por
-    history.listen(onParentNavigate);
+    // const { onParentNavigate } = por;
+    // history.listen(onParentNavigate);
 
   }, []);
 
