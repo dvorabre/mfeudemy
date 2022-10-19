@@ -13,8 +13,9 @@ const mount = (el, { onNavigate, defaultHistory }) => {
   }
 
   ReactDOM.render(<App history={history} />, el);
-  return {
-    // move the function to the call, that the parent will can call children
+
+  // move the function to the call, that the parent will can call children
+  const obj = {
     onParentNavigate: ({ pathname: nextPathname}) => {
 
       const { pathname } = history.location;
@@ -23,6 +24,8 @@ const mount = (el, { onNavigate, defaultHistory }) => {
       }
     }
   };
+  console.log(obj, "onParent");
+  return obj;
 };
 
 // If we are in development and in isolation,
