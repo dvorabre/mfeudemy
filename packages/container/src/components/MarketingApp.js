@@ -8,7 +8,7 @@ export default () => {
 
   useEffect(() => {
     console.log(mount, "mount in mark");
-    const { onParentNavigate } = mount(ref.current, {
+    const por = mount(ref.current, {
       onNavigate: ({pathname: nextPathname}) => {
         // listen get a location object that contain pathname property hith the path
         const { pathname } = history.location;
@@ -19,6 +19,7 @@ export default () => {
     });
 
     // move to the module when navigate happened
+    const { onParentNavigate } = por
     history.listen(onParentNavigate);
 
   }, []);
