@@ -14,6 +14,8 @@ const generateClassName = createGenerateClassName(
 );
 
 export default ({ history }) => {
+
+  console.log("in marketing app");
   return (
     <div>
       <StylesProvider generateClassName={generateClassName}>
