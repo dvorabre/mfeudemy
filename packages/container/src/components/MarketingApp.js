@@ -19,6 +19,7 @@ export default () => {
     });
 
     // move to the module when navigate happened
+    if (onParentNavigate)
     history.listen(onParentNavigate);
 
   }, []);
