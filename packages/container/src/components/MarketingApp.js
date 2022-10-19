@@ -8,7 +8,7 @@ export default () => {
 
   useEffect(() => {
 
-    const pa = mount(ref.current, {
+    const { onParentNavigate } = mount(ref.current, {
       onNavigate: ({pathname: nextPathname}) => {
         // listen get a location object that contain pathname property hith the path
         const { pathname } = history.location;
@@ -17,7 +17,7 @@ export default () => {
         }
       },
     });
-console.log(pa, "onParentNavigate");
+
     // move to the module when navigate happened
     history.listen(onParentNavigate);
 
