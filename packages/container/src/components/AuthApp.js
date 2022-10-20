@@ -7,7 +7,7 @@ export default ({ onSignIn }) => {
   const history = useHistory();
 
   useEffect(() => {
-    console.log(mount, "mount in auth");
+    console.log(mount, "mount in auth!");
    
     const por = mount(ref.current, {
       initialPath: history.location.pathname,
